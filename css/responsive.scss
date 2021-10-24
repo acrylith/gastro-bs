@@ -1,0 +1,17 @@
+@media screen and (min-width: 1600px) {
+    .big-logo {
+        margin: 120px 0 40px 0;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .headtext {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .left__item, .right {
+        display: none;
+    }
+}

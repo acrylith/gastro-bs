@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;600;700&display=swap');
+
+* {
+    font-family: 'Roboto Slab';
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(36, 36, 36);
+    margin: 0;
+}
+
+//navigation start
+
+nav {
+    height: 60px;
+    position: fixed;
+    width: 100%;
+    background-color: rgba(34, 34, 34, 0.7);
+    .container {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.left {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+
+    .home {
+        display: inline-flex;
+    }
+
+    &__item {
+        display: inline-flex;
+        align-content: stretch;
+        align-items: center;
+        list-style: none;
+        padding: 0 8px;
+        height: 100%;
+        transition: all .3s;
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+    }
+
+    &__link{
+        color: whitesmoke;
+        text-decoration: none;
+        font-size: 16pt;
+        img {
+            height: 100%;
+        }
+
+        &:hover {
+            color: whitesmoke;
+        }
+    }
+}
+
+.right {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    &__item {
+        display: inline-flex;
+        align-content: center;
+        align-items: center;
+        list-style: none;
+        padding: 0 8px;
+        height: 100%;
+        border-radius: 5px;
+        transition: all .3s;
+    }
+
+    .soc {
+        padding: 0 14px;
+        svg{
+            fill: whitesmoke;
+            transform: scale(1.5);
+        }
+
+        &:nth-child(1) {
+            &:hover{
+                background-color: rgb(193, 53, 132);
+            }
+        }
+
+        &:nth-child(2) {
+            &:hover{
+                background-color: rgb(66, 103, 178);
+            }
+        }
+    }
+
+    .tel {
+        border: 1px solid whitesmoke;
+        border-radius: 20px;
+        a {
+            color: whitesmoke;
+            text-decoration: none;
+            font-size: 16px;
+            transition: all .3s;
+        }
+
+        &:hover {
+            background-color: whitesmoke;
+            a {
+                color: black;
+            }
+        }
+    }
+}
+
+//navigation end
+
+//header start
+
+.heading {
+    padding-top: 60px;
+    height: 100vh;
+    background-image: url('../img/pizza-background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 60px;
+}
+
+.big-logo {
+    img {
+        width: 100%;
+    }
+    margin: 20px 0;
+}
+
+.headtext {
+    color: whitesmoke;
+    font-size: 24pt;
+    text-align: center;
+}
+
+//header end
+
+//home menu start
+
+.main {
+    background-image: url('../img/logo-background.png');
+    background-attachment: fixed;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.dishcard {
+    border: 2px whitesmoke solid;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    &__image {
+        img{
+            width: 100%;
+            border-radius: 10px;
+        }
+    }
+
+    &__text {
+        padding: 10px;
+        color: whitesmoke;
+        .money {
+            display: flex;
+            flex-direction: column;
+            
+            .size, .price {
+                display: flex;
+                p {
+                    flex-grow: 1;
+                }
+            }
+        }
+    }
+}
