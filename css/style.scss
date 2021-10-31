@@ -24,6 +24,46 @@ nav {
     }
 }
 
+.modal {
+    background-color:rgb(36, 36, 36);
+    justify-content: center;
+    align-content: center;
+
+    &__menu {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        list-style: none;
+        gap: 20px;
+    }
+
+    &__item {
+        a {
+            color: whitesmoke;
+            text-decoration: none;
+        }
+    }
+
+    &__open {
+        border: none;
+        background: transparent;
+    }
+
+    &__close {
+        position: absolute;
+        top: 14px;
+        left: 14px;
+        color: whitesmoke;
+        border: none;
+        background-color: transparent;
+    }
+}
+
+.modalshow {
+    display: flex;
+}
+
 .left {
     margin: 0;
     padding: 0;
@@ -31,6 +71,10 @@ nav {
 
     .home {
         display: inline-flex;
+    }
+
+    &__button {
+        display: none;
     }
 
     &__item {
@@ -61,17 +105,16 @@ nav {
 }
 
 .right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     margin: 0;
     padding: 0;
     height: 100%;
     &__item {
-        display: inline-flex;
-        align-content: center;
-        align-items: center;
         list-style: none;
-        padding: 0 8px;
-        height: 100%;
-        border-radius: 5px;
+        padding: 4px 8px;
+        // height: 100%;
         transition: all .3s;
     }
 
@@ -95,6 +138,15 @@ nav {
         }
     }
 
+    .cart {
+        border: 1px solid whitesmoke;
+        border-radius: 50px;
+        a {
+            font-size: 16px;
+            line-height: 16px;
+        }
+    }
+
     .tel {
         border: 1px solid whitesmoke;
         border-radius: 20px;
@@ -112,6 +164,10 @@ nav {
             }
         }
     }
+}
+
+.phone-icon {
+    display: none;
 }
 
 //navigation end
@@ -155,13 +211,37 @@ nav {
 .dishcard {
     border: 2px whitesmoke solid;
     border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.5);
     margin-bottom: 20px;
+    color: whitesmoke;
     &__image {
+        position: relative;
         img{
             width: 100%;
             border-radius: 10px;
         }
+
+        &:hover {
+            .dishcard__overlay {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: .5s ease;
+        background-color: rgba(0, 0, 0, 0.8);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
     }
 
     &__text {
@@ -177,6 +257,58 @@ nav {
                     flex-grow: 1;
                 }
             }
+        }
+    }
+
+    &__buy {
+        padding: 0 12px;
+    }
+}
+
+.buy {
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    &__size {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+
+    &__buttons {
+        display: flex;
+        // flex-grow: 0.5;
+        justify-content: flex-end;
+        gap: 14px;
+    }
+
+    &__decrease {
+        border: 1px solid whitesmoke;
+        background-color: transparent;
+        color: whitesmoke;
+        padding: 0 9px;
+        border-radius: 50%;
+        font-weight: bold;
+        transition: .5s all;
+
+        &:hover {
+            background-color: rgba(245, 245, 245, 0.2);
+        }
+    }
+
+    &__add {
+        border: none;
+        background-color: tomato;
+        color: whitesmoke;
+        border-radius: 10px;
+        transition: .5s all;
+        
+        &:hover {
+            background-color: rgb(190, 71, 50);
         }
     }
 }

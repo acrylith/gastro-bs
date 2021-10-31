@@ -21,6 +21,40 @@ nav .container {
   justify-content: space-between;
 }
 
+.modal {
+  background-color: #242424;
+  justify-content: center;
+  align-content: center;
+}
+.modal__menu {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  list-style: none;
+  gap: 20px;
+}
+.modal__item a {
+  color: whitesmoke;
+  text-decoration: none;
+}
+.modal__open {
+  border: none;
+  background: transparent;
+}
+.modal__close {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  color: whitesmoke;
+  border: none;
+  background-color: transparent;
+}
+
+.modalshow {
+  display: flex;
+}
+
 .left {
   margin: 0;
   padding: 0;
@@ -28,6 +62,9 @@ nav .container {
 }
 .left .home {
   display: inline-flex;
+}
+.left__button {
+  display: none;
 }
 .left__item {
   display: inline-flex;
@@ -54,18 +91,16 @@ nav .container {
 }
 
 .right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   margin: 0;
   padding: 0;
   height: 100%;
 }
 .right__item {
-  display: inline-flex;
-  align-content: center;
-  align-items: center;
   list-style: none;
-  padding: 0 8px;
-  height: 100%;
-  border-radius: 5px;
+  padding: 4px 8px;
   transition: all 0.3s;
 }
 .right .soc {
@@ -80,6 +115,14 @@ nav .container {
 }
 .right .soc:nth-child(2):hover {
   background-color: #4267b2;
+}
+.right .cart {
+  border: 1px solid whitesmoke;
+  border-radius: 50px;
+}
+.right .cart a {
+  font-size: 16px;
+  line-height: 16px;
 }
 .right .tel {
   border: 1px solid whitesmoke;
@@ -96,6 +139,10 @@ nav .container {
 }
 .right .tel:hover a {
   color: black;
+}
+
+.phone-icon {
+  display: none;
 }
 
 .heading {
@@ -131,12 +178,34 @@ nav .container {
 .dishcard {
   border: 2px whitesmoke solid;
   border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.5);
   margin-bottom: 20px;
+  color: whitesmoke;
+}
+.dishcard__image {
+  position: relative;
 }
 .dishcard__image img {
   width: 100%;
   border-radius: 10px;
+}
+.dishcard__image:hover .dishcard__overlay {
+  opacity: 1;
+}
+.dishcard__overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
 }
 .dishcard__text {
   padding: 10px;
@@ -151,4 +220,46 @@ nav .container {
 }
 .dishcard__text .money .size p, .dishcard__text .money .price p {
   flex-grow: 1;
+}
+.dishcard__buy {
+  padding: 0 12px;
+}
+
+.buy__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.buy__size {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.buy__buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 14px;
+}
+.buy__decrease {
+  border: 1px solid whitesmoke;
+  background-color: transparent;
+  color: whitesmoke;
+  padding: 0 9px;
+  border-radius: 50%;
+  font-weight: bold;
+  transition: 0.5s all;
+}
+.buy__decrease:hover {
+  background-color: rgba(245, 245, 245, 0.2);
+}
+.buy__add {
+  border: none;
+  background-color: tomato;
+  color: whitesmoke;
+  border-radius: 10px;
+  transition: 0.5s all;
+}
+.buy__add:hover {
+  background-color: #be4732;
 }

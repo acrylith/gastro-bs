@@ -3,13 +3,33 @@
     margin: 120px 0 40px 0;
   }
 }
+@media screen and (max-width: 1024px) {
+  .heading {
+    max-height: 660px;
+  }
+}
 @media screen and (max-width: 992px) {
   .headtext {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 @media screen and (max-width: 768px) {
-  .left__item, .right {
+  .left__button {
+    display: inline-flex;
+  }
+  .left__item {
     display: none;
+  }
+
+  .phone-icon {
+    display: inline-block;
+  }
+
+  .tel-number {
+    display: none;
+  }
+
+  .headtext {
+    font-size: 18px;
   }
 }
