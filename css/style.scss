@@ -22,6 +22,7 @@ nav {
         display: flex;
         justify-content: space-between;
     }
+    z-index: 10000;
 }
 
 .modal {
@@ -241,6 +242,7 @@ nav {
         background-color: rgba(0, 0, 0, 0.8);
         border-radius: 10px;
         display: flex;
+        justify-content: center;
         align-items: center;
     }
 

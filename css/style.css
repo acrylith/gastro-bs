@@ -14,6 +14,7 @@ nav {
   position: fixed;
   width: 100%;
   background-color: rgba(34, 34, 34, 0.7);
+  z-index: 10000;
 }
 nav .container {
   height: 100%;
@@ -205,6 +206,7 @@ nav .container {
   background-color: rgba(0, 0, 0, 0.8);
   border-radius: 10px;
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 .dishcard__text {
