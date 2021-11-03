@@ -139,12 +139,15 @@ nav {
         }
     }
 
-    .cart {
+    .carticon {
         border: 1px solid whitesmoke;
         border-radius: 50px;
-        a {
+        button {
             font-size: 16px;
             line-height: 16px;
+            background-color: transparent;
+            border: none;
+            padding: 0;
         }
     }
 
@@ -169,6 +172,55 @@ nav {
 
 .phone-icon {
     display: none;
+}
+
+.cart {
+    background-color: rgb(32, 39, 39);
+    color: whitesmoke;
+    height: 90vh;
+    width: 100vw;
+    display: none;
+
+    &__list {
+        height: 50%;
+        overflow-y: scroll;
+        margin-bottom: 22px;
+    }
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+        padding: 12px;
+        margin-bottom: 10px;
+        border: 2px solid whitesmoke;
+        border-radius: 20px;
+
+        button {
+            background-color: transparent;
+            color: whitesmoke;
+            border: 1px solid whitesmoke;
+            border-radius: 50%;
+        }
+    }
+
+    &__image {
+        width: 80px;
+        height: 80px;
+        img {
+            width: 100%;
+        }
+    }
+
+    &__check {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.cartshow {
+    display: block;
 }
 
 //navigation end
@@ -311,6 +363,16 @@ nav {
         
         &:hover {
             background-color: rgb(190, 71, 50);
+
+
+            .rotate {
+                transform: rotate(1turn);
+            }
         }
     }
+}
+
+.rotate {
+    margin-right: 4px;
+    transition: transform .8s linear;
 }
